@@ -1,0 +1,53 @@
+Create a new package named General
+Inside that package create a class called employee
+
+Code of class employee :-
+
+package General;
+public class employee
+{
+    protected int empid;
+    private String ename;
+    public float earnings(int empid,String ename, int basic)
+    {
+        float t = 1.95f*basic;
+        System.out.println("\nEmployee ID = "+empid);
+        System.out.println("Employee Name = "+ename);
+        return t;
+    }
+}
+
+
+Now create another package named Marketing
+Inside that package create a new class named sales
+
+Code of class sales :-
+
+package Marketing;
+import java.util.*;
+public class sales extends General.employee
+{
+    float tallowance(float t)
+    {
+    return (0.05f*t);
+    }
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter employee ID : ");
+        int empid=Integer.parseInt(sc.nextLine());
+        System.out.print("Enter employee Name : ");
+        String ename=sc.nextLine();
+        System.out.print("Enter basic salary : ");
+        int basic=Integer.parseInt(sc.nextLine());
+        sales obj =new sales();
+        float t = obj.earnings(empid,ename,basic);
+        System.out.println("Total Earnings = "+t);
+        System.out.println("Travelling Allowance = "+obj.tallowance(t));
+    }
+}
+
+
+
+Now compile both the class by writing *javac employee.java* and *javac sales.java* in the terminal,
+but only run the sales class by writing *java sales* in the terminal because the employee class dosent have a main method.
