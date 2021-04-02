@@ -1,6 +1,6 @@
-This Program 
-Will Capitalize 
-First Letter 
-Of Every 
-Word In 
-Every Line 
+this program 
+will capitalize 
+first letter 
+of every 
+word in 
+every line
